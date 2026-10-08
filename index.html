@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>황정인 · Graphic Designer</title>
+<meta name="description" content="브랜드의 첫인상부터 구매 버튼까지 — 6년 7개월 차 그래픽 디자이너 황정인의 포트폴리오. CI/BI, 캐릭터, 편집, 패키지, SNS 콘텐츠, 커머스 상세페이지, UI/UX.">
+<meta property="og:title" content="황정인 · Graphic Designer Portfolio">
+<meta property="og:description" content="브랜드의 첫인상부터 구매 버튼까지. CI/BI · Character · Editorial · Package · SNS · Commerce · UI/UX">
+<meta property="og:image" content="img/og.jpg">
+<meta name="theme-color" content="#f3f1ec">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f1ec; --paper:#fbfaf7; --ink:#151515; --mute:#6d6a63; --line:#d9d5cc;
+  --mint:#14b886; --mint-soft:#d6f3e8; --dark:#141414;
+  --en:"Archivo",system-ui,sans-serif; --ko:"Pretendard",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--ko);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.en{font-family:var(--en)}
+.label{font-family:var(--en);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
+nav.solid{background:rgba(243,241,236,.9);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--en);font-weight:900;font-size:18px;letter-spacing:-.01em}
+.logo b{color:var(--mint)}
+nav ul{display:flex;gap:28px;list-style:none;font-family:var(--en);font-size:13px;font-weight:500;letter-spacing:.06em}
+nav ul a{opacity:.7;transition:opacity .2s}
+nav ul a:hover{opacity:1}
+nav ul a span{color:var(--mint);margin-right:4px}
+
+/* hero */
+.hero > .wrap{width:100%}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:110px 0 60px;position:relative}
+.status{display:inline-flex;align-items:center;gap:10px;font-family:var(--en);font-size:12px;letter-spacing:.12em;padding:8px 14px;border:1px solid var(--line);border-radius:99px;background:var(--paper)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 0 var(--mint);animation:ping 2s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(20,184,134,.6)}80%,100%{box-shadow:0 0 0 10px rgba(20,184,134,0)}}
+.hero h1{font-family:var(--en);font-weight:900;font-size:clamp(64px,13vw,184px);line-height:.86;letter-spacing:-.045em;margin:34px 0 30px}
+.hero h1 .p{color:var(--mint)}
+.hero h1 .ko{display:block;font-family:var(--ko);font-weight:800;font-size:clamp(26px,3.6vw,48px);letter-spacing:-.03em;line-height:1.25;margin-top:22px}
+.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:end}
+.hero p.lead{font-size:18px;max-width:560px;color:#33312d}
+.hero p.lead strong{background:linear-gradient(transparent 60%,var(--mint-soft) 60%)}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:14px}
+.facts dt{font-family:var(--en);font-size:11px;letter-spacing:.12em;color:var(--mute);padding-top:3px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:99px;font-weight:600;font-size:15px;border:1px solid var(--ink);transition:transform .2s,background .2s,color .2s}
+.btn.solid{background:var(--ink);color:var(--bg)}
+.btn:hover{transform:translateY(-2px)}
+.btn.solid:hover{background:var(--mint);border-color:var(--mint);color:#fff}
+
+/* marquee */
+.marquee{overflow:hidden;border-block:1px solid var(--line);background:var(--paper);padding:18px 0}
+.track{display:flex;gap:48px;width:max-content;animation:mq 40s linear infinite;font-family:var(--en);font-weight:800;font-size:28px;letter-spacing:-.01em;white-space:nowrap}
+.track span:nth-child(even){color:var(--mint)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.stat{padding:44px 28px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:var(--en);font-weight:900;font-size:clamp(40px,5vw,64px);line-height:1;letter-spacing:-.03em}
+.stat b small{font-size:.45em;margin-left:2px}
+.stat span{display:block;margin-top:10px;font-size:14px;color:var(--mute)}
+
+/* section */
+section.block{padding:130px 0 40px}
+.sec-head{display:grid;grid-template-columns:200px 1fr;gap:32px;margin-bottom:56px;align-items:start}
+.sec-head .num{font-family:var(--en);font-weight:900;font-size:15px;letter-spacing:.08em}
+.sec-head .num em{font-style:normal;color:var(--mint)}
+.sec-head h2{font-size:clamp(30px,4vw,48px);line-height:1.2;letter-spacing:-.035em;font-weight:800}
+.sec-head p{margin-top:14px;color:var(--mute);max-width:620px}
+
+/* featured */
+.feat{display:grid;grid-template-columns:1.25fr 1fr;gap:0;background:var(--dark);color:#f3f1ec;border-radius:28px;overflow:hidden;cursor:pointer}
+.feat .pics{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#000}
+.feat .pics img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1.05;transition:transform .7s}
+.feat:hover .pics img{transform:scale(1.03)}
+.feat .txt{padding:52px 48px;display:flex;flex-direction:column}
+.feat .tag{font-family:var(--en);font-size:12px;letter-spacing:.14em;color:var(--mint)}
+.feat h3{font-size:40px;letter-spacing:-.03em;line-height:1.15;margin:16px 0 18px}
+.feat p{color:#bdb9b0;font-size:15px}
+.feat ul{list-style:none;margin:26px 0;display:grid;gap:10px;font-size:15px}
+.feat ul li{padding-left:22px;position:relative}
+.feat ul li:before{content:"";position:absolute;left:0;top:10px;width:10px;height:2px;background:var(--mint)}
+.feat .more{margin-top:auto;font-family:var(--en);font-size:13px;letter-spacing:.1em}
+
+/* filter + grid */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:64px 0 28px}
+.filters button{font:500 13px var(--en);letter-spacing:.08em;padding:10px 16px;border-radius:99px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;transition:all .2s}
+.filters button sup{font-size:10px;color:var(--mute);margin-left:3px}
+.filters button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.filters button.on sup{color:var(--mint)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card{cursor:pointer;opacity:1;transition:opacity .35s,transform .35s}
+.card.hide{display:none}
+.card .thumb{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/3.3;background:var(--paper)}
+.card .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .thumb img{transform:scale(1.05)}
+.card .thumb .cnt{position:absolute;right:12px;bottom:12px;background:rgba(20,20,20,.75);color:#fff;font:600 11px var(--en);letter-spacing:.06em;padding:6px 10px;border-radius:99px}
+.card .meta{display:flex;justify-content:space-between;gap:12px;margin-top:14px;align-items:baseline}
+.card h4{font-size:19px;letter-spacing:-.02em}
+.card .yr{font-family:var(--en);font-size:12px;color:var(--mute)}
+.card .cats{font-family:var(--en);font-size:11px;letter-spacing:.1em;color:var(--mint);margin-top:2px}
+.card p{font-size:14px;color:var(--mute);margin-top:6px}
+
+/* timeline */
+.tl{border-top:1px solid var(--ink)}
+.tl-row{display:grid;grid-template-columns:200px 1fr 1.1fr;gap:32px;padding:34px 0;border-bottom:1px solid var(--line)}
+.tl-row .when{font-family:var(--en);font-weight:800;font-size:15px}
+.tl-row .when small{display:block;font-weight:500;color:var(--mute);font-size:12px;margin-top:4px}
+.tl-row h3{font-size:22px;letter-spacing:-.02em}
+.tl-row h3 span{display:block;font-size:14px;font-weight:500;color:var(--mute);margin-top:4px}
+.tl-row ul{list-style:none;display:grid;gap:6px;font-size:15px}
+.tl-row ul li{padding-left:16px;position:relative}
+.tl-row ul li:before{content:"·";position:absolute;left:2px;color:var(--mint);font-weight:900}
+
+/* abilities */
+.ab{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ab-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:34px 30px}
+.ab-card .n{font-family:var(--en);font-weight:900;font-size:13px;color:var(--mint);letter-spacing:.1em}
+.ab-card h3{font-size:22px;letter-spacing:-.02em;margin:12px 0 10px}
+.ab-card p{font-size:15px;color:#4a4740}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:40px}
+.tools span{font:500 13px var(--en);padding:9px 14px;border-radius:10px;background:var(--ink);color:var(--bg)}
+.tools span.k{background:transparent;color:var(--ink);border:1px solid var(--line);font-family:var(--ko)}
+
+/* awards */
+.aw{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.aw h3{font-family:var(--en);font-size:13px;letter-spacing:.14em;color:var(--mute);margin-bottom:14px;font-weight:500}
+.aw ul{list-style:none;border-top:1px solid var(--ink)}
+.aw li{display:grid;grid-template-columns:90px 1fr;gap:16px;padding:15px 0;border-bottom:1px solid var(--line);font-size:15px}
+.aw li time{font-family:var(--en);font-size:13px;color:var(--mute);padding-top:2px}
+.aw li em{font-style:normal;color:var(--mint);font-weight:700;margin-left:6px}
+
+/* contact */
+.contact{background:var(--dark);color:var(--bg);margin-top:130px;padding:120px 0 40px}
+.contact h2{font-family:var(--en);font-weight:900;font-size:clamp(52px,10vw,148px);line-height:.9;letter-spacing:-.045em}
+.contact h2 b{color:var(--mint)}
+.contact p{color:#a9a59c;margin:28px 0 36px;font-size:18px;max-width:560px}
+.contact .mail{font-family:var(--en);font-size:clamp(22px,3vw,34px);font-weight:800;border-bottom:2px solid var(--mint);padding-bottom:4px}
+.contact .btns .btn{border-color:#f3f1ec}
+.contact .btns .btn.solid{background:var(--mint);border-color:var(--mint);color:#0e0e0e}
+footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:110px;padding-top:24px;border-top:1px solid #333;font-size:12px;color:#7d796f;font-family:var(--en);letter-spacing:.06em}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:100;background:rgba(14,14,14,.86);backdrop-filter:blur(6px);display:none;overflow-y:auto;padding:40px 20px}
+.modal.open{display:block}
+.sheet{max-width:1080px;margin:0 auto;background:var(--paper);border-radius:26px;overflow:hidden;animation:up .4s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{transform:translateY(30px);opacity:0}}
+.sheet header{padding:48px 52px 36px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;border-bottom:1px solid var(--line)}
+.sheet h3{font-size:38px;letter-spacing:-.03em;line-height:1.15;margin-top:10px}
+.sheet .sub{color:var(--mint);font-weight:600;margin-top:4px}
+.sheet .desc{margin-top:18px;color:#3d3a34}
+.sheet dl{display:grid;grid-template-columns:90px 1fr;gap:10px 14px;font-size:14px;align-content:start;padding-top:8px}
+.sheet dt{font-family:var(--en);font-size:11px;letter-spacing:.12em;color:var(--mute);padding-top:3px}
+.sheet .gal{padding:28px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px;background:#ebe8e1}
+.sheet .gal img{width:100%;border-radius:12px;background:#fff;cursor:zoom-in}
+.sheet .gal img.w{grid-column:1/-1}
+.x{position:fixed;top:18px;right:22px;width:48px;height:48px;border-radius:50%;border:0;background:#f3f1ec;font-size:24px;cursor:pointer;z-index:110}
+.zoom{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.94);display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:30px;cursor:zoom-out}
+.zoom.open{display:flex}
+.zoom img{max-width:min(1200px,100%);height:auto}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .hero-grid,.feat,.aw,.sheet header{grid-template-columns:1fr}
+  .grid,.ab{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .tl-row{grid-template-columns:1fr;gap:10px}
+  .sec-head{grid-template-columns:1fr;gap:10px}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  nav ul{display:none}
+  .grid,.ab{grid-template-columns:1fr}
+  .feat .txt{padding:34px 26px}
+  .feat h3{font-size:30px}
+  .stat{padding:30px 18px}
+  .sheet header{padding:32px 24px}
+  .sheet h3{font-size:28px}
+  .sheet .gal{grid-template-columns:1fr;padding:14px}
+  .modal{padding:12px 8px}
+  section.block{padding:90px 0 20px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap">
+  <a href="#top" class="logo">JUNGIN<b>.</b></a>
+  <ul>
+    <li><a href="#work"><span>01</span>WORK</a></li>
+    <li><a href="#story"><span>02</span>STORY</a></li>
+    <li><a href="#ability"><span>03</span>ABILITY</a></li>
+    <li><a href="#contact"><span>04</span>CONTACT</a></li>
+  </ul>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <span class="status"><i></i>GRAPHIC DESIGNER · BRAND &amp; CONTENTS · OPEN TO WORK</span>
+  <h1>JUNGIN<br>HWANG<span class="p">.</span>
+    <span class="ko">브랜드의 첫인상부터<br>구매 버튼까지 디자인합니다.</span></h1>
+  <div class="hero-grid">
+    <div>
+      <p class="lead">6년 7개월 동안 <strong>로고·캐릭터·패키지·SNS·상세페이지·웹</strong>을 오가며 13개 이상의 브랜드를 만들었습니다. 예쁜 결과물보다 <strong>고객이 반응하는 결과물</strong>을 먼저 고민하는 디자이너입니다.</p>
+      <div class="btns">
+        <a class="btn solid" href="#work">대표 작업 보기 ↓</a>
+        <a class="btn" href="#contact">연락하기</a>
+      </div>
+    </div>
+    <dl class="facts">
+      <dt>NAME</dt><dd>황정인 · Jungin Hwang</dd>
+      <dt>ROLE</dt><dd>그래픽 디자이너 (브랜드 · 콘텐츠 · 커머스)</dd>
+      <dt>BASE</dt><dd>대전</dd>
+      <dt>EDU</dt><dd>한남대학교 디자인학과 · 프론트엔드 개발 과정 660h</dd>
+      <dt>MAIL</dt><dd><a href="mailto:zchuri@hanmail.net">zchuri@hanmail.net</a></dd>
+    </dl>
+  </div>
+</div></header>
+
+<div class="marquee"><div class="track" aria-hidden="true">
+  <span>CI/BI</span><span>CHARACTER</span><span>EDITORIAL</span><span>PACKAGE</span><span>SNS CONTENTS</span><span>COMMERCE</span><span>UI/UX</span><span>POSTER</span>
+  <span>CI/BI</span><span>CHARACTER</span><span>EDITORIAL</span><span>PACKAGE</span><span>SNS CONTENTS</span><span>COMMERCE</span><span>UI/UX</span><span>POSTER</span>
+</div></div>
+
+<div class="wrap"><div class="stats">
+  <div class="stat reveal"><b>6.7<small>yrs</small></b><span>그래픽 디자인 실무 (국내 + 미국)</span></div>
+  <div class="stat reveal"><b>13<small>+</small></b><span>함께 작업한 브랜드 · 클라이언트</span></div>
+  <div class="stat reveal"><b>7</b><span>다뤄 본 디자인 분야</span></div>
+  <div class="stat reveal"><b>5</b><span>디자인 공모전 · 대회 수상 및 본선</span></div>
+</div></div>
+
+<!-- WORK -->
+<section class="block" id="work"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="num"><em>01</em> / WORK</div>
+    <div><h2>대표 작업</h2><p>카드를 누르면 프로젝트 설명과 전체 이미지를 볼 수 있습니다.</p></div>
+  </div>
+
+  <article class="feat reveal" data-id="chef">
+    <div class="pics">
+      <img src="img/070.jpg" alt="셰프애찬 안보현 광고 현수막" loading="lazy">
+      <img src="img/007.jpg" alt="셰프애찬 TV CF 인증샷 이벤트" loading="lazy">
+    </div>
+    <div class="txt">
+      <span class="tag">FEATURED · COMMERCE · 2023.12 – 2026.03</span>
+      <h3>셰프애찬<br>프리미엄 한식 반찬 브랜드</h3>
+      <p>인하우스 디자이너로 2년 4개월간 자사몰의 배너, 상세페이지, 이벤트, 오프라인 홍보물까지 브랜드의 모든 접점을 맡았습니다.</p>
+      <ul>
+        <li>제품 특징과 구매 전환을 고려한 상세페이지 기획·디자인</li>
+        <li>TV CF 연계 인증샷 이벤트, 모델 활용 광고·현수막 제작</li>
+        <li>쇼핑몰 웹·앱 UI 관리, 신규 매장 오픈 포스터</li>
+      </ul>
+      <span class="more">VIEW PROJECT →</span>
+    </div>
+  </article>
+
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<!-- STORY -->
+<section class="block" id="story"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="num"><em>02</em> / STORY</div>
+    <div><h2>뉴저지의 매장 앞에서 시작해<br>대전의 자사몰까지</h2><p>에이전시, 스타트업, 인하우스를 모두 거치며 일하는 환경이 바뀔 때마다 디자인이 해야 할 일을 다시 배웠습니다.</p></div>
+  </div>
+  <div class="tl">
+    <div class="tl-row reveal">
+      <div class="when">2023.12 – 2026.03<small>2년 4개월</small></div>
+      <h3>㈜오웬푸드셰프애찬<span>디자인팀 · 그래픽 디자인</span></h3>
+      <ul><li>상세페이지 기획 및 제작</li><li>쇼핑몰 웹 디자인 관리, 앱 UI/UX 디자인</li><li>배너·캐릭터·패키지 디자인, 촬영물 보정</li><li>사내 프로필·명함, 행사 배너 및 홍보물</li></ul>
+    </div>
+    <div class="tl-row reveal">
+      <div class="when">2022.08 – 2023.06<small>11개월</small></div>
+      <h3>㈜라이프스탁 (야매스쿨)<span>디자인지원팀 · 그래픽 디자인</span></h3>
+      <ul><li>사내 캐릭터 '야토' 개발 및 콘텐츠 활용</li><li>주식 입문서 『개미용어사전』 편집·출간</li><li>영업부 협업 고객 유지용 홍보 콘텐츠 기획</li><li>유튜브 썸네일, 카드뉴스, 배너, 웹 UI</li></ul>
+    </div>
+    <div class="tl-row reveal">
+      <div class="when">2020.04 – 2022.07<small>2년 4개월</small></div>
+      <h3>버킷셀러 (Bucket Seller)<span>브랜드기획팀 · 그래픽 디자인</span></h3>
+      <ul><li>서울풍물시장, 대한적십자사, 이브자리, 구름샵 SNS 콘텐츠 기획·제작</li><li>브랜드 아이덴티티, 캐릭터, UI/UX 디자인</li><li>패키지·편집물 디자인, 외주 프로젝트 대응</li></ul>
+    </div>
+    <div class="tl-row reveal">
+      <div class="when">2017.04 – 2018.03<small>1년 · 미국 뉴저지</small></div>
+      <h3>OUTRE<span>디자인팀 인턴 · 그래픽 디자인</span></h3>
+      <ul><li>배너, 행택, 뉴스레터, 패키지 디자인</li><li>홍보 영상 제작 지원</li><li>매장 고객 인터뷰를 바탕으로 프로모션 기획에 참여, 이후 프로모션 업무 전담</li></ul>
+    </div>
+    <div class="tl-row reveal">
+      <div class="when">2013 – 2017</div>
+      <h3>한남대학교 디자인학과<span>+ 웹앱 기반 프론트엔드 개발자 양성과정 (660시간, 2016)</span></h3>
+      <ul><li>HTML 기반 퍼블리싱을 익혀 개발자와 같은 언어로 협업</li><li>재학 중 디자인 공모전 수상 및 프레젠테이션 대회 본선 진출</li></ul>
+    </div>
+  </div>
+</div></section>
+
+<!-- ABILITY -->
+<section class="block" id="ability"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="num"><em>03</em> / ABILITY</div>
+    <div><h2>이렇게 일합니다</h2></div>
+  </div>
+  <div class="ab">
+    <div class="ab-card reveal"><span class="n">01 · CUSTOMER FIRST</span><h3>고객의 관심사에서 출발</h3><p>미국 인턴 시절 매장 앞에서 고객에게 직접 원하는 이벤트와 사은품을 물었고, 그 답으로 프로모션을 짰습니다. 지금도 "내가 고객이라면?"으로 시안을 시작합니다.</p></div>
+    <div class="ab-card reveal"><span class="n">02 · ONE BRAND, EVERY TOUCHPOINT</span><h3>로고에서 상세페이지까지 한 톤으로</h3><p>CI를 직접 리뉴얼한 제노포커스는 패키지까지 이어서 작업했습니다. 브랜드가 닿는 모든 접점을 하나의 언어로 묶는 것이 강점입니다.</p></div>
+    <div class="ab-card reveal"><span class="n">03 · DESIGN × DEV</span><h3>개발을 이해하는 디자이너</h3><p>660시간의 프론트엔드 과정으로 HTML·웹 구조를 익혔습니다. 구현 가능한 화면을 설계하고, 개발자와 원활하게 소통합니다.</p></div>
+  </div>
+  <div class="tools reveal">
+    <span>Photoshop</span><span>Illustrator</span><span>InDesign</span><span>After Effects</span><span>Premiere Pro</span><span>HTML/CSS</span>
+    <span class="k">로고·CI·BI</span><span class="k">캐릭터</span><span class="k">편집·북디자인</span><span class="k">패키지</span><span class="k">SNS 콘텐츠</span><span class="k">상세페이지</span><span class="k">웹·모바일 UI</span><span class="k">리플렛·홍보물</span>
+  </div>
+
+  <div class="aw" style="margin-top:90px">
+    <div class="reveal">
+      <h3>AWARDS</h3>
+      <ul>
+        <li><time>2016.09</time><span>Blue Award 상품문화디자인 국제공모전<em>특선</em></span></li>
+        <li><time>2016.06</time><span>제28회 대전광역시미술대전<em>입선 2점</em></span></li>
+        <li><time>2015.11</time><span>대한민국 프레젠테이션대회<em>본선 진출</em></span></li>
+        <li><time>2014.11</time><span>제23회 대전디자인공모전<em>특선</em></span></li>
+        <li><time>2014.11</time><span>제23회 대전디자인공모전<em>입선</em></span></li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <h3>CERTIFICATES</h3>
+      <ul>
+        <li><time>2019.05</time><span>컴퓨터활용능력 2급 · 대한상공회의소</span></li>
+        <li><time>2016.06</time><span>컴퓨터그래픽스운용기능사 · 한국산업인력공단</span></li>
+        <li><time>2016.04</time><span>웹디자인기능사 · 한국산업인력공단</span></li>
+        <li><time>2015.03</time><span>GTQ 포토샵 1급 · 한국생산성본부</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact"><div class="wrap">
+  <h2>LET'S MAKE<br>IT <b>CLICK.</b></h2>
+  <p>브랜드를 처음 만드는 일도, 이미 있는 브랜드를 더 잘 팔리게 만드는 일도 좋아합니다. 편하게 연락 주세요.</p>
+  <a class="mail" href="mailto:zchuri@hanmail.net">zchuri@hanmail.net</a>
+  <div class="btns" style="margin-top:40px">
+    <a class="btn solid" href="mailto:zchuri@hanmail.net">메일 보내기</a>
+    <a class="btn" href="#top">맨 위로 ↑</a>
+  </div>
+  <footer><span>© 2026 JUNGIN HWANG</span><span>모든 작업물의 저작권은 각 클라이언트와 디자이너에게 있습니다.</span></footer>
+</div></section>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true"><button class="x" id="x" aria-label="닫기">×</button><div class="sheet" id="sheet"></div></div>
+<div class="zoom" id="zoom"><img alt=""></div>
+
+<script>
+const P=[
+ {id:"chef",t:"셰프애찬",s:"프리미엄 한식 반찬 브랜드",c:["COMMERCE","SNS"],y:"2023.12 – 2026.03",cl:"㈜오웬푸드셰프애찬",r:"인하우스 · 기획 및 디자인",url:"chefechan.com",
+  d:"제품 특징과 구매 전환을 고려한 시각 요소를 설계해 셰프애찬의 이벤트 배너와 상세페이지를 전담했습니다. 모델 광고, TV CF 연계 이벤트, 신규 매장 오픈 포스터 등 온·오프라인 프로모션 콘텐츠를 함께 제작했습니다.",
+  i:[70,71,7,8,55,87,88,13,44,89,100,101,34,90,94,102,45,46],cv:70},
+ {id:"yamae",t:"야매스쿨",s:"주식 투자자문 기업의 캐릭터 · 편집 · SNS · 웹",c:["CHARACTER","EDITORIAL","SNS","UI/UX"],y:"2022.08 – 2023.06",cl:"㈜라이프스탁",r:"팀(2인) · 기획 및 디자인",url:"yamae.kr",
+  d:"사내 캐릭터가 없던 야매스쿨에 상한가를 상징하는 빨간 토끼 '야토'를 만들고, 주식 초보자를 위한 입문서 『개미용어사전』을 그림과 웹툰으로 쉽게 풀어 편집·출간했습니다. 카카오톡 홍보 콘텐츠, 유튜브 썸네일, 카드뉴스, 홈페이지 UI까지 전반적인 디자인을 담당했습니다.",
+  i:[49,50,51,73,3,2,11,27,0,24,25,26],cv:49},
+ {id:"zeno",t:"제노포커스",s:"효소 기업 CI 리뉴얼 + 건강기능식품 패키지",c:["CI/BI","PACKAGE"],y:"2022.04 – 2022.06",cl:"㈜제노포커스",r:"개인 외주 · 디자인",
+  d:"G와 F를 결합해 G 안에 F가 보이는 심볼형 로고로 CI를 리뉴얼했고, 이 CI를 활용해 마이크로바이옴 밸런스·면역 가득 유산균·비우자 패키지까지 이어서 디자인했습니다. 친환경 원통 패키지에 맞춘 심플한 구성에 제품별 포인트 컬러를 두었습니다.",
+  i:[80,76,77,78,79],cv:80},
+ {id:"royal",t:"로얄 홀덤",s:"홀덤펍 CI · 매장 사인 · 이벤트 포스터",c:["CI/BI","POSTER"],y:"2022",cl:"로얄 홀덤",r:"개인 외주 · 디자인",
+  d:"이어지는 선의 각도로 카드를 표현하고, 홀덤 족보 중 '스트레이트'를 뜻하는 숫자와 모양, 왕관 아이콘을 담아 CI를 만들었습니다. 간판과 테이블, 칩, 매장 이벤트 포스터까지 매장 전체에 적용했습니다.",
+  i:[57,97,96,98,99,92],cv:57},
+ {id:"redcross",t:"대한적십자사 누구나 캠페인",s:"기부 참여를 이끄는 SNS · 이벤트 콘텐츠",c:["SNS"],y:"2021",cl:"대한적십자사",r:"개인 · 기획 및 디자인",
+  d:"코로나19로 어려움을 겪는 취약계층에게 진료, 황금도시락, 장학금을 지원하는 '누구나 캠페인'을 알리기 위한 SNS 콘텐츠와 이벤트 콘텐츠, 기부 랜딩페이지를 만들었습니다. 셀럽 참여, 챌린지, 퀴즈 등 참여형 포맷으로 기부 장벽을 낮췄습니다.",
+  i:[48,74,75,9,10,12,14,15,16,18,19,20,21,22,23],cv:9},
+ {id:"pungmul",t:"서울풍물시장",s:"전통시장의 스토리텔링형 SNS 콘텐츠",c:["SNS"],y:"2020.04 – 2020.12",cl:"서울풍물시장",r:"개인 · 기획 및 디자인",
+  d:"대표 전통시장인 만큼 트렌드에 맞는 차별화된 홍보가 필요하다고 보고, '뉴트로' 키워드로 시장의 장점을 살린 공감형 콘텐츠를 기획했습니다. 인스타그램·페이스북·블로그·유튜브 썸네일까지 채널별로 운영해 고객 참여와 소통을 이끌어냈습니다.",
+  i:[85,37,62,63,28,30,31,32,33,29,6,1,61,17],cv:28},
+ {id:"gureum",t:"구름샵",s:"프리미엄 기능성 베개 SNS 콘텐츠",c:["SNS"],y:"2020.04 – 2021.05",cl:"구름샵",r:"팀(4인) · 기획 및 디자인",
+  d:"프리미엄 기능성 베개 '구름베개'를 알리기 위해 인스타그램·페이스북 콘텐츠를 기획·제작했습니다. 모델 광고 이미지부터 제품 장점을 짚는 카드뉴스, 전단지까지 '숙면'이라는 하나의 메시지로 묶었습니다.",
+  i:[47,83,35,4,5,36,84,86,52,53,54],cv:47},
+ {id:"evezary",t:"이브자리",s:"전환창업 제안 SNS 광고",c:["SNS"],y:"2021",cl:"이브자리",r:"팀 · 기획 및 디자인",
+  d:"대중이 '창업'에 어려움과 반감을 느끼지 않도록, 모델 아이유를 활용한 밝고 재미있는 분위기로 이브자리 전환창업을 제안하는 페이스북·유튜브 콘텐츠를 기획·제작했습니다.",
+  i:[67,68,65,66,69],cv:67},
+ {id:"mayo",t:"마요",s:"리워드 커머스 플랫폼 BI · 웹 디자인",c:["UI/UX","CHARACTER"],y:"2021.04 – 2022.07",cl:"마요코퍼레이션",r:"팀(2인) · 기획 및 디자인",url:"maayo.co.kr",
+  d:"고유 링크를 공유해 구매가 일어나면 리워드가 쌓이는 플랫폼의 브랜드 아이덴티티, 캐릭터, 웹 디자인을 맡았습니다. 처음 쓰는 사람도 쉽게 이해하도록 메인·상세 화면의 정보 구조를 정리했습니다.",
+  i:[38,40,39,41,42,59,60,95],cv:38},
+ {id:"cafe",t:"카페 메뉴 포스터",s:"음료 메뉴 포스터 시리즈",c:["POSTER"],y:"2025",cl:"카페 디굿",r:"개인 외주 · 디자인",
+  d:"딸기라떼, 아메리카노, 초코라떼, 카페라떼 네 가지 메뉴를 하나의 시리즈로 디자인했습니다. 메뉴마다 고유한 배경색을 주고, 궤도 라인과 반짝이 그래픽으로 공통된 톤을 유지했습니다.",
+  i:[56,64,81,82],cv:56},
+ {id:"famd",t:"FAMD",s:"애프터쉐이브 카탈로그 · 브랜드 소개서",c:["EDITORIAL"],y:"2021.01",cl:"㈜로앤제이",r:"개인 외주 · 디자인",
+  d:"'불편함을 해결하기 위해 정직하게 움직이는' 남성 그루밍 브랜드 FAMD의 브랜드 소개서와 카탈로그를 만들었습니다. 선과 면만으로 심플하고 남성적인 인상을 주었습니다.",
+  i:[91],cv:91},
+ {id:"mask",t:"매혹 마스크",s:"프리미엄 기능성 패션 마스크 패키지",c:["PACKAGE"],y:"2020.10 – 2020.12",cl:"조이뉴스24",r:"팀(2인) · 디자인",
+  d:"화장이 묻지 않는 고급 쿨론 원단 마스크로, '매혹'이라는 제품명에서 매화꽃을 떠올려 한국적인 일러스트 패키지를 만들었습니다.",
+  i:[58,43],cv:58},
+ {id:"outre",t:"OUTRE",s:"미국 뉴저지 가발 브랜드 디자인팀 인턴",c:["EDITORIAL","PACKAGE"],y:"2017.04 – 2018.03",cl:"Outre",r:"디자인팀 인턴",
+  d:"흑인 헤어 제품을 만들고 유통하는 기업에서 배너, 행택, 뉴스레터, 홍보 영상을 담당하고 패키지 디자인을 보조했습니다. 정기 프로모션 행사에도 참여해 매장 고객의 반응을 직접 확인하며 일했습니다.",
+  i:[93],cv:93}
+];
+const CATS=["ALL","COMMERCE","CI/BI","CHARACTER","EDITORIAL","PACKAGE","SNS","UI/UX","POSTER"];
+const src=n=>`img/${String(n).padStart(3,"0")}.jpg`;
+const grid=document.getElementById("grid"),fl=document.getElementById("filters");
+P.filter(p=>p.id!=="chef").forEach(p=>{
+  const a=document.createElement("article");a.className="card reveal";a.dataset.id=p.id;a.dataset.c=p.c.join("|");
+  a.innerHTML=`<div class="thumb"><img src="${src(p.cv)}" alt="${p.t}" loading="lazy"><span class="cnt">${p.i.length} IMAGES</span></div>
+  <div class="meta"><h4>${p.t}</h4><span class="yr">${p.y.slice(0,4)}</span></div>
+  <div class="cats">${p.c.join(" · ")}</div><p>${p.s}</p>`;
+  grid.appendChild(a);
+});
+CATS.forEach((c,k)=>{
+  const n=c==="ALL"?P.length:P.filter(p=>p.c.includes(c)).length;
+  const b=document.createElement("button");b.innerHTML=`${c}<sup>${n}</sup>`;if(!k)b.className="on";
+  b.onclick=()=>{fl.querySelectorAll("button").forEach(x=>x.classList.remove("on"));b.classList.add("on");
+    grid.querySelectorAll(".card").forEach(el=>el.classList.toggle("hide",c!=="ALL"&&!el.dataset.c.split("|").includes(c)));
+    document.querySelector(".feat").style.display=(c==="ALL"||c==="COMMERCE"||c==="SNS")?"":"none";};
+  fl.appendChild(b);
+});
+const modal=document.getElementById("modal"),sheet=document.getElementById("sheet"),zoom=document.getElementById("zoom");
+function openP(id){
+  const p=P.find(x=>x.id===id);
+  sheet.innerHTML=`<header><div><span class="label">${p.c.join(" · ")}</span><h3>${p.t}</h3><div class="sub">${p.s}</div><p class="desc">${p.d}</p></div>
+  <dl><dt>CLIENT</dt><dd>${p.cl}</dd><dt>DATE</dt><dd>${p.y}</dd><dt>ROLE</dt><dd>${p.r}</dd>${p.url?`<dt>URL</dt><dd>${p.url}</dd>`:""}</dl></header>
+  <div class="gal">${p.i.map(n=>`<img src="${src(n)}" alt="${p.t}" loading="lazy">`).join("")}</div>`;
+  const imgs=sheet.querySelectorAll(".gal img");
+  imgs.forEach(im=>{const f=()=>{if(im.naturalWidth/im.naturalHeight>1.25)im.classList.add("w")};im.complete?f():im.onload=f;im.onclick=()=>{zoom.querySelector("img").src=im.src;zoom.classList.add("open")}});
+  if(imgs.length===1)imgs[0].classList.add("w");
+  modal.classList.add("open");modal.scrollTop=0;document.body.style.overflow="hidden";
+}
+function closeP(){modal.classList.remove("open");document.body.style.overflow=""}
+document.addEventListener("click",e=>{const c=e.target.closest("[data-id]");if(c)openP(c.dataset.id)});
+document.getElementById("x").onclick=closeP;
+modal.onclick=e=>{if(e.target===modal)closeP()};
+zoom.onclick=()=>zoom.classList.remove("open");
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){zoom.classList.contains("open")?zoom.classList.remove("open"):closeP()}});
+const nav=document.getElementById("nav");addEventListener("scroll",()=>nav.classList.toggle("solid",scrollY>40),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

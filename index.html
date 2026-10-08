@@ -82,8 +82,8 @@ section.block{padding:130px 0 40px}
 
 /* featured */
 .feat{display:grid;grid-template-columns:1.25fr 1fr;gap:0;background:var(--dark);color:#f3f1ec;border-radius:28px;overflow:hidden;cursor:pointer}
-.feat .pics{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:#000}
-.feat .pics img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1.05;transition:transform .7s}
+.feat .pics{display:grid;align-content:center;background:#e9e6df}
+.feat .pics img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;transition:transform .7s}
 .feat:hover .pics img{transform:scale(1.03)}
 .feat .txt{padding:52px 48px;display:flex;flex-direction:column}
 .feat .tag{font-family:var(--en);font-size:12px;letter-spacing:.14em;color:var(--mint)}
@@ -103,7 +103,7 @@ section.block{padding:130px 0 40px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .card{cursor:pointer;opacity:1;transition:opacity .35s,transform .35s}
 .card.hide{display:none}
-.card .thumb{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/3.3;background:var(--paper)}
+.card .thumb{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:var(--paper)}
 .card .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .card:hover .thumb img{transform:scale(1.05)}
 .card .thumb .cnt{position:absolute;right:12px;bottom:12px;background:rgba(20,20,20,.75);color:#fff;font:600 11px var(--en);letter-spacing:.06em;padding:6px 10px;border-radius:99px}
@@ -163,9 +163,12 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin
 .sheet .desc{margin-top:18px;color:#3d3a34}
 .sheet dl{display:grid;grid-template-columns:90px 1fr;gap:10px 14px;font-size:14px;align-content:start;padding-top:8px}
 .sheet dt{font-family:var(--en);font-size:11px;letter-spacing:.12em;color:var(--mute);padding-top:3px}
-.sheet .gal{padding:28px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px;background:#ebe8e1}
-.sheet .gal img{width:100%;border-radius:12px;background:#fff;cursor:zoom-in}
+.sheet .gal{padding:28px;align-items:start;display:grid;grid-template-columns:repeat(2,1fr);gap:16px;background:#ebe8e1}
+.sheet .gal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:#fff;cursor:zoom-in;transition:transform .3s}
+.sheet .gal img:hover{transform:scale(1.015)}
 .sheet .gal img.w{grid-column:1/-1}
+.sheet .gal{grid-template-columns:repeat(2,1fr)}
+.sheet .gal img.gif{aspect-ratio:1/1;object-fit:contain;background:#fae2e2;padding:12%}
 .x{position:fixed;top:18px;right:22px;width:48px;height:48px;border-radius:50%;border:0;background:#f3f1ec;font-size:24px;cursor:pointer;z-index:110}
 .zoom{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.94);display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:30px;cursor:zoom-out}
 .zoom.open{display:flex}
@@ -217,7 +220,7 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin
     <span class="ko">브랜드의 첫인상부터<br>구매 버튼까지 디자인합니다.</span></h1>
   <div class="hero-grid">
     <div>
-      <p class="lead">6년 7개월 동안 <strong>로고·캐릭터·패키지·SNS·상세페이지·웹</strong>을 오가며 13개 이상의 브랜드를 만들었습니다. 예쁜 결과물보다 <strong>고객이 반응하는 결과물</strong>을 먼저 고민하는 디자이너입니다.</p>
+      <p class="lead">6년 7개월 동안 <strong>로고·캐릭터·패키지·SNS·상세페이지·웹</strong>을 오가며 15개 이상의 브랜드를 만들었습니다. 예쁜 결과물보다 <strong>고객이 반응하는 결과물</strong>을 먼저 고민하는 디자이너입니다.</p>
       <div class="btns">
         <a class="btn solid" href="#work">대표 작업 보기 ↓</a>
         <a class="btn" href="#contact">연락하기</a>
@@ -228,7 +231,8 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin
       <dt>ROLE</dt><dd>그래픽 디자이너 (브랜드 · 콘텐츠 · 커머스)</dd>
       <dt>BASE</dt><dd>대전</dd>
       <dt>EDU</dt><dd>한남대학교 디자인학과 · 프론트엔드 개발 과정 660h</dd>
-      <dt>MAIL</dt><dd><a href="mailto:zchuri@hanmail.net">zchuri@hanmail.net</a></dd>
+      <dt>MAIL</dt><dd><a href="mailto:yjbm0516@naver.com">yjbm0516@naver.com</a></dd>
+      <dt>TEL</dt><dd><a href="tel:010-7424-6128">010-7424-6128</a></dd>
     </dl>
   </div>
 </div></header>
@@ -240,7 +244,7 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin
 
 <div class="wrap"><div class="stats">
   <div class="stat reveal"><b>6.7<small>yrs</small></b><span>그래픽 디자인 실무 (국내 + 미국)</span></div>
-  <div class="stat reveal"><b>13<small>+</small></b><span>함께 작업한 브랜드 · 클라이언트</span></div>
+  <div class="stat reveal"><b>15<small>+</small></b><span>함께 작업한 브랜드 · 클라이언트</span></div>
   <div class="stat reveal"><b>7</b><span>다뤄 본 디자인 분야</span></div>
   <div class="stat reveal"><b>5</b><span>디자인 공모전 · 대회 수상 및 본선</span></div>
 </div></div>
@@ -254,8 +258,7 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin
 
   <article class="feat reveal" data-id="chef">
     <div class="pics">
-      <img src="img/070.jpg" alt="셰프애찬 안보현 광고 현수막" loading="lazy">
-      <img src="img/007.jpg" alt="셰프애찬 TV CF 인증샷 이벤트" loading="lazy">
+      <img src="img/f_070.jpg" alt="셰프애찬 안보현 광고 현수막" loading="lazy">
     </div>
     <div class="txt">
       <span class="tag">FEATURED · COMMERCE · 2023.12 – 2026.03</span>
@@ -352,10 +355,10 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin
 <section class="contact" id="contact"><div class="wrap">
   <h2>LET'S MAKE<br>IT <b>CLICK.</b></h2>
   <p>브랜드를 처음 만드는 일도, 이미 있는 브랜드를 더 잘 팔리게 만드는 일도 좋아합니다. 편하게 연락 주세요.</p>
-  <a class="mail" href="mailto:zchuri@hanmail.net">zchuri@hanmail.net</a>
+  <a class="mail" href="mailto:yjbm0516@naver.com">yjbm0516@naver.com</a><br><a class="mail" href="tel:010-7424-6128" style="display:inline-block;margin-top:14px">010-7424-6128</a>
   <div class="btns" style="margin-top:40px">
-    <a class="btn solid" href="mailto:zchuri@hanmail.net">메일 보내기</a>
-    <a class="btn" href="#top">맨 위로 ↑</a>
+    <a class="btn solid" href="mailto:yjbm0516@naver.com">메일 보내기</a>
+    <a class="btn" href="tel:010-7424-6128">전화하기</a><a class="btn" href="#top">맨 위로 ↑</a>
   </div>
   <footer><span>© 2026 JUNGIN HWANG</span><span>모든 작업물의 저작권은 각 클라이언트와 디자이너에게 있습니다.</span></footer>
 </div></section>
@@ -370,7 +373,10 @@ const P=[
   i:[70,71,7,8,55,87,88,13,44,89,100,101,34,90,94,102,45,46],cv:70},
  {id:"yamae",t:"야매스쿨",s:"주식 투자자문 기업의 캐릭터 · 편집 · SNS · 웹",c:["CHARACTER","EDITORIAL","SNS","UI/UX"],y:"2022.08 – 2023.06",cl:"㈜라이프스탁",r:"팀(2인) · 기획 및 디자인",url:"yamae.kr",
   d:"사내 캐릭터가 없던 야매스쿨에 상한가를 상징하는 빨간 토끼 '야토'를 만들고, 주식 초보자를 위한 입문서 『개미용어사전』을 그림과 웹툰으로 쉽게 풀어 편집·출간했습니다. 카카오톡 홍보 콘텐츠, 유튜브 썸네일, 카드뉴스, 홈페이지 UI까지 전반적인 디자인을 담당했습니다.",
-  i:[49,50,51,73,3,2,11,27,0,24,25,26],cv:49},
+  i:[232,233,49,50,51,73,3,2,11,27,0,24,25,26,231],cv:232},
+ {id:"yato",t:"야토",s:"주식을 좋아하는 빨간 토끼 · 캐릭터 & 이모티콘",c:["CHARACTER"],y:"2022.08 – 2023.05",cl:"㈜라이프스탁",r:"팀(2인) · 디자인",
+  d:"사내 캐릭터가 없던 야매스쿨을 위해 상한가를 상징하는 빨간 토끼 '야토'를 만들었습니다. 주식 초보자에게 먼저 다가가 설명하기 좋아한다는 설정으로 사내 홍보물, 텀블러, 개미용어사전 등에 활용했고, 카카오톡 이모티콘 제안을 위해 24종의 표정과 움직이는 이모티콘까지 작업했습니다.",
+  i:[260,261,262,263],cv:260,gif:["yato_0.gif","yato_1.gif","yato_2.gif"]},
  {id:"zeno",t:"제노포커스",s:"효소 기업 CI 리뉴얼 + 건강기능식품 패키지",c:["CI/BI","PACKAGE"],y:"2022.04 – 2022.06",cl:"㈜제노포커스",r:"개인 외주 · 디자인",
   d:"G와 F를 결합해 G 안에 F가 보이는 심볼형 로고로 CI를 리뉴얼했고, 이 CI를 활용해 마이크로바이옴 밸런스·면역 가득 유산균·비우자 패키지까지 이어서 디자인했습니다. 친환경 원통 패키지에 맞춘 심플한 구성에 제품별 포인트 컬러를 두었습니다.",
   i:[80,76,77,78,79],cv:80},
@@ -380,9 +386,9 @@ const P=[
  {id:"redcross",t:"대한적십자사 누구나 캠페인",s:"기부 참여를 이끄는 SNS · 이벤트 콘텐츠",c:["SNS"],y:"2021",cl:"대한적십자사",r:"개인 · 기획 및 디자인",
   d:"코로나19로 어려움을 겪는 취약계층에게 진료, 황금도시락, 장학금을 지원하는 '누구나 캠페인'을 알리기 위한 SNS 콘텐츠와 이벤트 콘텐츠, 기부 랜딩페이지를 만들었습니다. 셀럽 참여, 챌린지, 퀴즈 등 참여형 포맷으로 기부 장벽을 낮췄습니다.",
   i:[48,74,75,9,10,12,14,15,16,18,19,20,21,22,23],cv:9},
- {id:"pungmul",t:"서울풍물시장",s:"전통시장의 스토리텔링형 SNS 콘텐츠",c:["SNS"],y:"2020.04 – 2020.12",cl:"서울풍물시장",r:"개인 · 기획 및 디자인",
+ {id:"pungmul",t:"서울풍물시장",s:"전통시장의 스토리텔링형 SNS 콘텐츠",c:["SNS"],y:"2020.04 – 2021",cl:"서울풍물시장",r:"개인 · 기획 및 디자인",
   d:"대표 전통시장인 만큼 트렌드에 맞는 차별화된 홍보가 필요하다고 보고, '뉴트로' 키워드로 시장의 장점을 살린 공감형 콘텐츠를 기획했습니다. 인스타그램·페이스북·블로그·유튜브 썸네일까지 채널별로 운영해 고객 참여와 소통을 이끌어냈습니다.",
-  i:[85,37,62,63,28,30,31,32,33,29,6,1,61,17],cv:28},
+  i:[210,211,212,213,214,215,216,217,218,219,220,221,222,209,200,201,202,203,204,205,206,207,208,85,37,62,63,28,30,31,32,33,29,6,1,61,17],cv:210},
  {id:"gureum",t:"구름샵",s:"프리미엄 기능성 베개 SNS 콘텐츠",c:["SNS"],y:"2020.04 – 2021.05",cl:"구름샵",r:"팀(4인) · 기획 및 디자인",
   d:"프리미엄 기능성 베개 '구름베개'를 알리기 위해 인스타그램·페이스북 콘텐츠를 기획·제작했습니다. 모델 광고 이미지부터 제품 장점을 짚는 카드뉴스, 전단지까지 '숙면'이라는 하나의 메시지로 묶었습니다.",
   i:[47,83,35,4,5,36,84,86,52,53,54],cv:47},
@@ -401,16 +407,25 @@ const P=[
  {id:"mask",t:"매혹 마스크",s:"프리미엄 기능성 패션 마스크 패키지",c:["PACKAGE"],y:"2020.10 – 2020.12",cl:"조이뉴스24",r:"팀(2인) · 디자인",
   d:"화장이 묻지 않는 고급 쿨론 원단 마스크로, '매혹'이라는 제품명에서 매화꽃을 떠올려 한국적인 일러스트 패키지를 만들었습니다.",
   i:[58,43],cv:58},
+ {id:"wanbo",t:"완보",s:"소독에 보습을 더한 손소독제 · 캐릭터 & 패키지",c:["PACKAGE","CHARACTER"],y:"2020.06 – 2021.01",cl:"완보",r:"팀(3인) · 디자인",
+  d:"남녀노소를 타겟으로, 유쾌한 캐릭터를 활용해 친근하면서도 소독제의 깨끗한 이미지를 전달했습니다. 캐릭터 디자인부터 패키지, 상세페이지까지 작업했습니다.",
+  i:[235,234,236],cv:235},
+ {id:"konjac",t:"청춘농가 곤약쫀드기",s:"건강 간식 패키지 · 캐릭터",c:["PACKAGE","CHARACTER","COMMERCE"],y:"2023.12 – 2026.03",cl:"㈜오웬푸드셰프애찬",r:"인하우스 · 디자인",
+  d:"'건강한 한 입, 맛있는 한 입'이라는 메시지로 셰프애찬의 간식 브랜드 청춘농가의 곤약쫀드기 패키지를 디자인했습니다. 곤약을 들고 있는 강아지 캐릭터와 쫀드기 캐릭터로 친근함을 더하고, 뒷면에는 조리법 아이콘과 표시사항을 한눈에 읽히도록 정리했습니다.",
+  i:[250,251,252],cv:250},
+ {id:"ibk",t:"IBK창공 대전",s:"창업 육성 플랫폼 팜플렛 · 모집 캠페인",c:["EDITORIAL","SNS"],y:"2021.08 – 2021.11",cl:"IBK창공 (IBK기업은행)",r:"개인 · 기획 및 디자인",
+  d:"IBK기업은행의 창업 육성 플랫폼 IBK창공 대전 1기의 혁신창업기업 모집 카드뉴스·포스터·퀴즈 이벤트를 만들고, 선발 기업 34곳을 소개하는 팜플렛을 편집했습니다. 프로그램에 관심 있는 창업가가 프로세스를 쉽게 이해하고 접근할 수 있도록 정보 구조에 중점을 두었습니다.",
+  i:[240,241,244,242,243,223,224,225,226,228,229,227,230],cv:240},
  {id:"outre",t:"OUTRE",s:"미국 뉴저지 가발 브랜드 디자인팀 인턴",c:["EDITORIAL","PACKAGE"],y:"2017.04 – 2018.03",cl:"Outre",r:"디자인팀 인턴",
   d:"흑인 헤어 제품을 만들고 유통하는 기업에서 배너, 행택, 뉴스레터, 홍보 영상을 담당하고 패키지 디자인을 보조했습니다. 정기 프로모션 행사에도 참여해 매장 고객의 반응을 직접 확인하며 일했습니다.",
   i:[93],cv:93}
 ];
 const CATS=["ALL","COMMERCE","CI/BI","CHARACTER","EDITORIAL","PACKAGE","SNS","UI/UX","POSTER"];
-const src=n=>`img/${String(n).padStart(3,"0")}.jpg`;
+const src=n=>`img/${String(n).padStart(3,"0")}.jpg`, fsrc=n=>`img/f_${String(n).padStart(3,"0")}.jpg`;
 const grid=document.getElementById("grid"),fl=document.getElementById("filters");
 P.filter(p=>p.id!=="chef").forEach(p=>{
   const a=document.createElement("article");a.className="card reveal";a.dataset.id=p.id;a.dataset.c=p.c.join("|");
-  a.innerHTML=`<div class="thumb"><img src="${src(p.cv)}" alt="${p.t}" loading="lazy"><span class="cnt">${p.i.length} IMAGES</span></div>
+  a.innerHTML=`<div class="thumb"><img src="${fsrc(p.cv)}" alt="${p.t}" loading="lazy"><span class="cnt">${p.i.length} IMAGES</span></div>
   <div class="meta"><h4>${p.t}</h4><span class="yr">${p.y.slice(0,4)}</span></div>
   <div class="cats">${p.c.join(" · ")}</div><p>${p.s}</p>`;
   grid.appendChild(a);
@@ -428,9 +443,9 @@ function openP(id){
   const p=P.find(x=>x.id===id);
   sheet.innerHTML=`<header><div><span class="label">${p.c.join(" · ")}</span><h3>${p.t}</h3><div class="sub">${p.s}</div><p class="desc">${p.d}</p></div>
   <dl><dt>CLIENT</dt><dd>${p.cl}</dd><dt>DATE</dt><dd>${p.y}</dd><dt>ROLE</dt><dd>${p.r}</dd>${p.url?`<dt>URL</dt><dd>${p.url}</dd>`:""}</dl></header>
-  <div class="gal">${p.i.map(n=>`<img src="${src(n)}" alt="${p.t}" loading="lazy">`).join("")}</div>`;
+  <div class="gal">${p.i.map(n=>`<img src="${fsrc(n)}" data-full="${src(n)}" alt="${p.t}" loading="lazy">`).join("")}${(p.gif||[]).map(g=>`<img class="gif" src="img/${g}" data-full="img/${g}" alt="${p.t} 움직이는 이모티콘" loading="lazy">`).join("")}</div>`;
   const imgs=sheet.querySelectorAll(".gal img");
-  imgs.forEach(im=>{const f=()=>{if(im.naturalWidth/im.naturalHeight>1.25)im.classList.add("w")};im.complete?f():im.onload=f;im.onclick=()=>{zoom.querySelector("img").src=im.src;zoom.classList.add("open")}});
+  imgs.forEach(im=>{im.onclick=()=>{zoom.querySelector("img").src=im.dataset.full;zoom.classList.add("open");zoom.scrollTop=0}});
   if(imgs.length===1)imgs[0].classList.add("w");
   modal.classList.add("open");modal.scrollTop=0;document.body.style.overflow="hidden";
 }

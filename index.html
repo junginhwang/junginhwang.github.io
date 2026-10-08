@@ -169,6 +169,7 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin
 .sheet .gal img.w{grid-column:1/-1}
 .sheet .gal{grid-template-columns:repeat(2,1fr)}
 .sheet .gal.full{grid-template-columns:1fr}
+.sheet .gal.orig img{aspect-ratio:auto;object-fit:initial;height:auto}
 .sheet .gal.full img{aspect-ratio:auto;object-fit:initial;height:auto}
 .sheet .gal img.gif{aspect-ratio:1/1;object-fit:contain;background:#fae2e2;padding:12%}
 .x{position:fixed;top:18px;right:22px;width:48px;height:48px;border-radius:50%;border:0;background:#f3f1ec;font-size:24px;cursor:pointer;z-index:110}
@@ -391,9 +392,9 @@ const P=[
  {id:"pungmul",t:"서울풍물시장",s:"전통시장의 스토리텔링형 SNS 콘텐츠",c:["SNS"],y:"2020.04 – 2021",cl:"서울풍물시장",r:"개인 · 기획 및 디자인",
   d:"대표 전통시장인 만큼 트렌드에 맞는 차별화된 홍보가 필요하다고 보고, '뉴트로' 키워드로 시장의 장점을 살린 공감형 콘텐츠를 기획했습니다. 인스타그램·페이스북·블로그·유튜브 썸네일까지 채널별로 운영해 고객 참여와 소통을 이끌어냈습니다.",
   i:[210,211,212,213,214,215,216,217,218,219,220,221,222,209,200,201,202,203,204,205,206,207,208,85,37,62,63,28,30,31,32,33,29,6,1,61,17],cv:210},
- {id:"redcross",t:"대한적십자사 누구나 캠페인",s:"기부 참여를 이끄는 SNS · 이벤트 콘텐츠",c:["SNS"],y:"2021",cl:"대한적십자사",r:"개인 · 기획 및 디자인",
+ {id:"redcross",t:"대한적십자사 누구나 캠페인",s:"기부 참여를 이끄는 SNS · 이벤트 콘텐츠",c:["SNS"],y:"2021.09 – 2021.12",cl:"대한적십자사",r:"개인 · 기획 및 디자인",
   d:"코로나19로 어려움을 겪는 취약계층에게 진료, 황금도시락, 장학금을 지원하는 '누구나 캠페인'을 알리기 위한 SNS 콘텐츠와 이벤트 콘텐츠, 기부 랜딩페이지를 만들었습니다. 셀럽 참여, 챌린지, 퀴즈 등 참여형 포맷으로 기부 장벽을 낮췄습니다.",
-  i:[48,74,75,9,10,12,14,15,16,18,19,20,21,22,23],cv:9},
+  i:[48,9,10,19,18,20,22,12,21,15,16,14,23],cv:9,orig:true,wide:[48]},
  {id:"ibk",t:"IBK창공 대전",s:"창업 육성 플랫폼 팜플렛 · 모집 캠페인",c:["EDITORIAL","SNS"],y:"2021.08 – 2021.11",cl:"IBK창공 (IBK기업은행)",r:"개인 · 기획 및 디자인",
   d:"IBK기업은행의 창업 육성 플랫폼 IBK창공 대전 1기의 혁신창업기업 모집 카드뉴스·포스터·퀴즈 이벤트를 만들고, 선발 기업 34곳을 소개하는 팜플렛을 편집했습니다. 프로그램에 관심 있는 창업가가 프로세스를 쉽게 이해하고 접근할 수 있도록 정보 구조에 중점을 두었습니다.",
   i:[240,241,244,242,243,223,224,225,226,228,229,227,230],cv:240},
@@ -439,7 +440,7 @@ function openP(id){
   const p=P.find(x=>x.id===id);
   sheet.innerHTML=`<header><div><span class="label">${p.c.join(" · ")}</span><h3>${p.t}</h3><div class="sub">${p.s}</div><p class="desc">${p.d.split(" / ").join("<br><br>")}</p></div>
   <dl><dt>CLIENT</dt><dd>${p.cl}</dd><dt>DATE</dt><dd>${p.y}</dd><dt>ROLE</dt><dd>${p.r}</dd>${p.url?`<dt>URL</dt><dd>${p.url}</dd>`:""}</dl></header>
-  <div class="gal${p.full?" full":""}">${p.i.map(n=>`<img src="${p.full?src(n):fsrc(n)}" data-full="${src(n)}" alt="${p.t}" loading="lazy">`).join("")}${(p.gif||[]).map(g=>`<img class="gif" src="img/${g}" data-full="img/${g}" alt="${p.t} 움직이는 이모티콘" loading="lazy">`).join("")}</div>`;
+  <div class="gal${p.full?" full":""}${p.orig?" orig":""}">${p.i.map(n=>`<img${(p.wide||[]).includes(n)?' class="w"':""} src="${p.full||p.orig?src(n):fsrc(n)}" data-full="${src(n)}" alt="${p.t}" loading="lazy">`).join("")}${(p.gif||[]).map(g=>`<img class="gif" src="img/${g}" data-full="img/${g}" alt="${p.t} 움직이는 이모티콘" loading="lazy">`).join("")}</div>`;
   const imgs=sheet.querySelectorAll(".gal img");
   imgs.forEach(im=>{im.onclick=()=>{zoom.querySelector("img").src=im.dataset.full;zoom.classList.add("open");zoom.scrollTop=0}});
   if(imgs.length===1)imgs[0].classList.add("w");

@@ -259,8 +259,8 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin
 </div></header>
 
 <div class="marquee"><div class="track" aria-hidden="true">
-  <span>CI/BI</span><span>CHARACTER</span><span>EDITORIAL</span><span>PACKAGE</span><span>SNS CONTENTS</span><span>COMMERCE</span><span>UI/UX</span><span>POSTER</span>
-  <span>CI/BI</span><span>CHARACTER</span><span>EDITORIAL</span><span>PACKAGE</span><span>SNS CONTENTS</span><span>COMMERCE</span><span>UI/UX</span><span>POSTER</span>
+  <span>CI/BI</span><span>CHARACTER</span><span>EDITORIAL</span><span>PACKAGE</span><span>SNS CONTENTS</span><span>UI/UX</span><span>POSTER</span>
+  <span>CI/BI</span><span>CHARACTER</span><span>EDITORIAL</span><span>PACKAGE</span><span>SNS CONTENTS</span><span>UI/UX</span><span>POSTER</span>
 </div></div>
 
 <div class="wrap"><div class="stats">
@@ -410,9 +410,9 @@ const P=[
  {id:"pungmul",t:"서울풍물시장",s:"전통시장의 스토리텔링형 SNS 콘텐츠",c:["SNS"],y:"2020.04 – 2021",cl:"서울풍물시장",r:"개인 · 기획 및 디자인",
   d:"서울의 대표 전통시장인 만큼 트렌드에 맞는 차별화된 홍보가 필요하다고 생각하여, '뉴트로' 키워드로 시장의 장점을 살린 공감형 콘텐츠를 기획했습니다. 인스타그램·페이스북·블로그·유튜브 썸네일까지 채널별로 운영해 고객 참여와 소통을 이끌어냈습니다.",
   i:[312,210,216,217,218,219,220,221,222,207,200,205,208],cv:312,orig:true,wide:[312]},
- {id:"redcross",t:"대한적십자사 누구나 캠페인",s:"기부 참여를 이끄는 SNS · 이벤트 콘텐츠",c:["SNS"],y:"2021.09 – 2021.12",cl:"대한적십자사",r:"개인 · 기획 및 디자인",
+ {id:"redcross",t:"대한적십자사 누구나 캠페인",s:"기부 참여를 이끄는 SNS · 이벤트 콘텐츠",c:["SNS","UI/UX"],y:"2021.09 – 2021.12",cl:"대한적십자사",r:"개인 · 기획 및 디자인",
   d:"코로나19로 어려움을 겪는 취약계층에게 진료, 황금도시락, 장학금을 지원하는 '누구나 캠페인'을 알리기 위한 SNS 콘텐츠와 이벤트 콘텐츠, 기부 랜딩페이지를 만들었습니다. 셀럽 참여, 챌린지, 퀴즈 등 참여형 포맷으로 기부 장벽을 낮췄습니다.",
-  i:[48,9,10,19,18,20,22,12,21,15,16,14,23],cv:48,orig:true,wide:[48]},
+  i:[48,9,10,19,18,20,22,12,21,15,16,14,23,346],cv:48,orig:true,wide:[48,346]},
  {id:"ibk",t:"IBK창공 대전",s:"창업 육성 플랫폼 팜플렛 · 모집 캠페인",c:["EDITORIAL","SNS"],y:"2021.11",cl:"IBK창공 (IBK기업은행)",r:"개인 · 기획 및 디자인",
   d:"IBK기업은행의 창업 육성 플랫폼 IBK창공 대전 1기의 혁신창업기업 모집 카드뉴스·포스터·퀴즈 이벤트를 만들고, 선발 기업 34곳을 소개하는 팜플렛을 편집했습니다. 프로그램에 관심 있는 창업가가 프로세스를 쉽게 이해하고 접근할 수 있도록 정보 구조에 중점을 두었습니다.",
   i:[240,241,244,242,243,223,224,225,226,228,229,227,230],cv:240},
@@ -429,7 +429,7 @@ const P=[
   d:"흑인 헤어 제품을 만들고 유통하는 기업에서 배너, 행택, 뉴스레터, 홍보 영상을 담당하고 패키지 디자인을 보조했습니다. 정기 프로모션 행사에도 참여해 매장 고객의 반응을 직접 확인하며 일했습니다.",
   i:[300,301,302,303],cv:303,full:true}
 ];
-const CATS=["ALL","COMMERCE","CI/BI","CHARACTER","EDITORIAL","PACKAGE","SNS","UI/UX","POSTER"];
+const CATS=["ALL","CI/BI","CHARACTER","EDITORIAL","PACKAGE","SNS","UI/UX","POSTER"];
 const src=n=>`img/${String(n).padStart(3,"0")}.jpg`, fsrc=n=>`img/f_${String(n).padStart(3,"0")}.jpg`;
 const grid=document.getElementById("grid"),fl=document.getElementById("filters");
 P.filter(p=>p.id!=="chef").forEach(p=>{
@@ -444,7 +444,7 @@ CATS.forEach((c,k)=>{
   const b=document.createElement("button");b.innerHTML=`${c}<sup>${n}</sup>`;if(!k)b.className="on";
   b.onclick=()=>{fl.querySelectorAll("button").forEach(x=>x.classList.remove("on"));b.classList.add("on");
     grid.querySelectorAll(".card").forEach(el=>el.classList.toggle("hide",c!=="ALL"&&!el.dataset.c.split("|").includes(c)));
-    document.querySelector(".feat").style.display=(c==="ALL"||c==="COMMERCE"||c==="SNS")?"":"none";};
+    document.querySelector(".feat").style.display=(c==="ALL"||c==="SNS")?"":"none";};
   fl.appendChild(b);
 });
 const modal=document.getElementById("modal"),sheet=document.getElementById("sheet"),zoom=document.getElementById("zoom");

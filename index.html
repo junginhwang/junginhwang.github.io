@@ -184,6 +184,13 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin
 .sheet .gal.g6{grid-template-columns:repeat(6,1fr)}.sheet .gal.g6 img{grid-column:span 3}.sheet .gal.g6 img.w{grid-column:1/-1}.sheet .gal.g6 img.t{grid-column:span 2}
 .sheet .gal.orig img{aspect-ratio:auto;object-fit:initial;height:auto}
 .sheet .gal.full img{aspect-ratio:auto;object-fit:initial;height:auto}
+.sheet .gal .fold{grid-column:1/-1;position:relative;max-height:min(90vh,900px);overflow:hidden;border-radius:12px}
+.sheet .gal .fold img{display:block}
+.sheet .gal .fold::after{content:"";position:absolute;left:0;right:0;bottom:0;height:180px;background:linear-gradient(rgba(235,232,225,0),#ebe8e1 85%);pointer-events:none}
+.sheet .gal .fold-btn{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:2;border:0;border-radius:999px;padding:12px 26px;background:#14B886;color:#fff;font:600 15px/1 Pretendard,sans-serif;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.15)}
+.sheet .gal .fold.open{max-height:none}
+.sheet .gal .fold.open::after{display:none}
+.sheet .gal .fold.open .fold-btn{position:static;transform:none;display:block;margin:14px auto 0}
 .sheet .gal img.gif{aspect-ratio:1/1;object-fit:contain;background:#fae2e2;padding:12%}
 .x{position:fixed;top:18px;right:22px;width:48px;height:48px;border-radius:50%;border:0;background:#f3f1ec;font-size:24px;cursor:pointer;z-index:110}
 .zoom{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.94);display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:30px;cursor:zoom-out}
@@ -393,7 +400,7 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin
 const P=[
  {id:"chef",t:"셰프애찬",s:"프리미엄 한식 반찬 브랜드",c:["COMMERCE","SNS"],y:"2023.12 – 2026.03",cl:"㈜오웬푸드셰프애찬",r:"인하우스 · 기획 및 디자인",url:"chefechan.com",
   d:"제품 특징과 구매 전환을 고려한 시각 요소를 설계해 셰프애찬의 이벤트 배너와 상세페이지를 전담했습니다. 모델 광고, TV CF 연계 이벤트, 신규 매장 오픈 포스터 등 온·오프라인 프로모션 콘텐츠를 함께 제작했습니다.",
-  i:[379,380,381,382,383,384,385],cv:378,orig:true,wide:[379,384,385]},
+  i:[379,380,381,382,383,384,385],cv:378,orig:true,wide:[379,384,385],fold:[384,385]},
  {id:"hoverjet",t:"코리아호버제트",s:"공기부양정 제조기업 홈페이지 · 브로슈어",c:["UI/UX","EDITORIAL"],y:"2026.10",cl:"코리아호버제트",r:"기획 및 디자인",url:"www.koreahoverjet.com/renewal-b",
   d:"‘대한민국 저수심 해양 모빌리티의 새로운 표준’이라는 메시지를 중심으로 코리아호버제트의 홈페이지와 브로슈어를 디자인했습니다. 시원한 바다 이미지와 역동적인 공기부양정 비주얼로 기업의 기술력과 전문성을 강조하고, 제품 라인업과 핵심 기술, 활용 분야를 한눈에 이해할 수 있도록 체계적으로 구성했습니다.",
   i:[403,395,396,397,398,399,400,401,402],cv:386,orig:true,wide:[403]},
@@ -408,7 +415,7 @@ const P=[
   i:[291,292,293,294],cv:291,full:true},
  {id:"yamae",t:"야매스쿨",s:"주식 투자자문 기업의 캐릭터 · 편집 · SNS · 웹",c:["CHARACTER","EDITORIAL","SNS","UI/UX"],y:"2022.08 – 2023.06",cl:"㈜라이프스탁",r:"팀(2인) · 기획 및 디자인",url:"yamae.kr",
   d:"사내 캐릭터가 없던 야매스쿨에 상한가를 상징하는 빨간 토끼 '야토'를 만들고, 주식 초보자를 위한 입문서 『개미용어사전』을 그림과 웹툰으로 쉽게 풀어 편집·출간했습니다. 카카오톡 홍보 콘텐츠, 유튜브 썸네일, 카드뉴스, 홈페이지 UI/UX까지 전반적인 디자인을 담당했습니다.",
-  i:[232,331,333,334,332,321,322,2,11,3,27,0,323,24],cv:232,orig:true,wide:[232,331,333,334,332,321,322,0,323,24]},
+  i:[232,331,333,334,332,321,322,2,11,3,27,0,323,24],cv:232,orig:true,wide:[232,331,333,334,332,321,322,0,323,24],fold:[323]},
  {id:"mayo",t:"마요",s:"리워드 커머스 플랫폼 BI · 웹 디자인",c:["UI/UX","CHARACTER","CI/BI","SNS"],y:"2021.04 – 2022.07",cl:"마요코퍼레이션",r:"팀(2인) · 기획 및 디자인",url:"maayo.co.kr",
   d:"고유 링크를 공유해 구매가 일어나면 리워드가 쌓이는 플랫폼의 브랜드 아이덴티티, 캐릭터, 웹 디자인을 맡았습니다. 처음 쓰는 사람도 쉽게 이해하도록 메인·상세 화면의 정보 구조를 정리했습니다.",
   i:[59,60,347,348,349,350,351,352,342,343,344,345],cv:38,orig:true,wide:[59,60],tri:[347,348,349,350,351,352]},
@@ -457,7 +464,7 @@ function openP(id){
   const p=P.find(x=>x.id===id);
   sheet.innerHTML=`<header><div><span class="label">${p.c.join(" · ")}</span><h3>${p.t}</h3><div class="sub">${p.s}</div><p class="desc">${p.d.split(" / ").join("<br><br>")}</p></div>
   <dl><dt>CLIENT</dt><dd>${p.cl}</dd><dt>DATE</dt><dd>${p.y}</dd><dt>ROLE</dt><dd>${p.r}</dd>${p.url?`<dt>URL</dt><dd>${p.url}</dd>`:""}</dl></header>
-  <div class="gal${p.full?" full":""}${p.orig?" orig":""}${p.tri?" g6":""}">${p.i.map(n=>`<img${(p.wide||[]).includes(n)?' class="w"':(p.tri||[]).includes(n)?' class="t"':""} src="${p.full||p.orig?src(n):fsrc(n)}" data-full="${src(n)}" alt="${p.t}" loading="lazy">`).join("")}${(p.gif||[]).map(g=>`<img class="gif" src="img/${g}" data-full="img/${g}" alt="${p.t} 움직이는 이모티콘" loading="lazy">`).join("")}</div>`;
+  <div class="gal${p.full?" full":""}${p.orig?" orig":""}${p.tri?" g6":""}">${p.i.map(n=>{const im=`<img${(p.wide||[]).includes(n)?' class="w"':(p.tri||[]).includes(n)?' class="t"':""} src="${p.full||p.orig?src(n):fsrc(n)}" data-full="${src(n)}" alt="${p.t}" loading="lazy">`;return (p.fold||[]).includes(n)?`<div class="fold">${im}<button type="button" class="fold-btn">전체 보기 ↓</button></div>`:im}).join("")}${(p.gif||[]).map(g=>`<img class="gif" src="img/${g}" data-full="img/${g}" alt="${p.t} 움직이는 이모티콘" loading="lazy">`).join("")}</div>`;
   const imgs=sheet.querySelectorAll(".gal img");
   imgs.forEach(im=>{im.onclick=()=>{zoom.querySelector("img").src=im.dataset.full;zoom.classList.add("open");zoom.scrollTop=0}});
   if(imgs.length===1)imgs[0].classList.add("w");
@@ -472,6 +479,7 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape"){zoom.classList.cont
 const nav=document.getElementById("nav");addEventListener("scroll",()=>nav.classList.toggle("solid",scrollY>40),{passive:true});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+document.addEventListener("click",e=>{const b=e.target.closest(".fold-btn");if(!b)return;e.stopPropagation();const f=b.parentElement;const o=f.classList.toggle("open");b.textContent=o?"접기 ↑":"전체 보기 ↓";if(!o)f.scrollIntoView({block:"start",behavior:"smooth"})},true);
 </script>
 </body>
 </html>
